@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 #root {
   max-width: 100% !important;
   margin: 0 !important;
@@ -49,14 +50,16 @@ header.header-principal nav {
 /* Contenedor del logo */
 header nav .logo {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 15px; 
   transition: transform 0.2s ease;
+}
 
 header nav .logo:hover {
   transform: scale(1.05); 
 }
 
+/* Estilo del nombre del restaurante */
 header nav .logo h1 {
   color: #2a2a2a;
   font-size: 1.8rem;
@@ -170,7 +173,7 @@ header nav .logo img {
 .carrusel-contenedor {
   position: relative;
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16 / 6;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 30px;
@@ -219,30 +222,6 @@ header nav .logo img {
   font-size: 1.1rem;
 }
 
-.hero-busqueda {
-  display: flex;
-  background: white;
-  border-radius: 25px;
-  padding: 5px;
-}
-
-.hero-busqueda input {
-  flex: 1;
-  border: none;
-  padding: 10px 15px;
-  outline: none;
-  border-radius: 25px;
-}
-
-.hero-busqueda button {
-  background: var(--color-naranja);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
 
 .hero-imagen {
   flex: 1;
@@ -331,7 +310,7 @@ header nav .logo img {
   color: #ccc;
 }
 
-
+/* Tarjetas de Productos (Categorías) */
 .categoria-seccion h2 {
   color: var(--color-primario);
   margin-bottom: 20px;
@@ -379,6 +358,7 @@ article.card-producto button {
   font-weight: bold;
 }
 
+/* Aside Flotante (Anuncio Auto) */
 aside.publicidad-flotante {
   position: fixed;
   bottom: 20px;
@@ -395,32 +375,6 @@ aside.publicidad-flotante {
 aside.publicidad-flotante h3 { font-size: 1rem; margin-bottom: 10px; color: var(--color-texto); }
 aside.publicidad-flotante p { font-size: 0.8rem; color: #333; }
 
-.carrito-lateral {
-  position: fixed;
-  top: 0;
-  right: -100%; 
-  width: 350px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
-  transition: right 0.3s ease;
-  z-index: 1000;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.carrito-lateral.abierto { right: 0; }
-.encabezado-carrito { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; }
-.encabezado-carrito button { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
-.items-carrito { flex-grow: 1; overflow-y: auto; }
-.items-carrito .item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
-.totales { border-top: 2px solid var(--color-texto); padding-top: 15px; text-align: right; }
-.btn-vaciar { background-color: var(--color-texto); color: white; padding: 10px; width: 100%; border: none; cursor: pointer; border-radius: 5px; margin-top: 10px;}
-
-/* Footer */
-footer { background-color: var(--color-texto); color: white; text-align: center; padding: 30px 20px; z-index: 10; position: relative;}
-
 .btn-cerrar-menu {
   display: none;
   background: none;
@@ -436,7 +390,7 @@ footer { background-color: var(--color-texto); color: white; text-align: center;
     padding: 10px 15px;
   }
   .nav-links-top {
-    display: none; 
+    display: none; /* Oculta los enlaces superiores "Inicio, Acerca de..." por espacio */
   }
   .btn-hamburguesa {
     display: block; /* Muestra el botón ☰ */
@@ -447,9 +401,6 @@ footer { background-color: var(--color-texto); color: white; text-align: center;
   }
   header nav .logo img {
     width: 45px;
-  }
-  .texto-carrito {
-    display: none; /* Oculta la palabra "Carrito" dejando solo el ícono 🛒 */
   }
   .btn-carrito-toggle {
     padding: 8px 12px;

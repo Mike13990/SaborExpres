@@ -1,6 +1,8 @@
-import {postres} from '../data/Productos'
+import React from 'react';
+import Productos from '../data/Productos';
 
 function Postres({postre, agregarCarrito}) {
+    const postres = Productos.postres;
     return (
         <section className='seccion-postres'>
             <h2>🍰 Postres</h2>
