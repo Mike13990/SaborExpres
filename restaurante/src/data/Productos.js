@@ -1,139 +1,165 @@
-  const menus = [
+import arosCebolla from "../assets/menus/aros-cebolla.jpg";
+import chickenSandwich from "../assets/menus/chicken-sandwich.jpg";
+import hamburguesaBBQ from "../assets/menus/hamburguesa-bbq.jpg";
+import hamburguesaClasica from "../assets/menus/hamburguesa-clasica.jpg";
+import hamburguesaDoble from "../assets/menus/hamburguesa-doble.jpg";
+import hotdog from "../assets/menus/hotdog.jpg";
+import menuInfantil from "../assets/menus/menu-infantil.jpg";
+import nuggets from "../assets/menus/nuggets.jpg";
+import papasFritas from "../assets/menus/papas-fritas.jpg";
+import wrapPollo from "../assets/menus/wrap-pollo.jpg";
+const menus = [
     { 
       id: 'm1', 
       nombre: 'Hamburguesa Clásica', 
       descripcion: 'Carne, lechuga, tomate y queso.', 
       precio: 85, 
-      img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300' 
+      imagen: hamburguesaClasica
     },
     { id: 'm2', 
       nombre: 'Hamburguesa Doble', 
       descripcion: 'Doble carne, doble queso, tocino.', 
       precio: 120, 
-      img: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGFtYnVyZ3VlcyUyMGRvYmxlfGVufDB8fDB8fHww' 
+      imagen: hamburguesaDoble 
     },
     { 
       id: 'm3', 
       nombre: 'Hamburguesa BBQ', 
       descripcion: 'Carne, aros de cebolla y salsa BBQ.', 
       precio: 110, 
-      img: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=300' 
+      imagen: hamburguesaBBQ
     },
     { 
       id: 'm4', 
       nombre: 'Chicken Sandwich', 
       descripcion: 'Pollo crujiente con mayonesa picante.', 
-      precio: 95, img: 'https://plus.unsplash.com/premium_photo-1738802845911-809a01acfa50?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+      precio: 95, 
+      imagen: chickenSandwich
     },
     { 
       id: 'm5', 
       nombre: 'Menú Infantil', 
       descripcion: 'Mini hamburguesa con papas y juguete.', 
       precio: 70, 
-      img: 'https://media.istockphoto.com/id/2152696991/photo/kids-meal-with-toy-and-juice-on-table.jpg?s=612x612&w=is&k=20&c=Fa7AMhB0qi-l4psMjysTZiEbV2W2fHVDybPSOxjfwRo=' 
+      imagen: menuInfantil
     },
     { 
       id: 'm6', 
       nombre: 'Hot Dog Especial', 
       descripcion: 'Salchicha de pavo, tocino y pico de gallo.', 
       precio: 65, 
-      img: 'https://plus.unsplash.com/premium_photo-1712327992307-281c0b2ab9f6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+      imagen: hotdog
     },
     { 
       id: 'm7', 
       nombre: 'Papas Fritas Grandes', 
       descripcion: 'Porción extra grande de papas crujientes.', 
       precio: 45, 
-      img: 'https://images.unsplash.com/photo-1661081090290-9b66fd49d882?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+      imagen: papasFritas 
     },
     { 
       id: 'm8', 
       nombre: 'Aros de Cebolla', 
       descripcion: 'Aros empanizados con aderezo ranch.', 
       precio: 50, 
-      img: 'https://images.unsplash.com/photo-1612487439058-0564e17f761b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+      imagen: arosCebolla
     },
     { 
       id: 'm9', 
       nombre: 'Nuggets (10 pz)', 
-      descripcion: 'Nuggets de pechuga de pollo.', precio: 75, img: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=300' },
+      descripcion: 'Nuggets de pechuga de pollo.',
+      precio: 75,
+      imagen: nuggets
+    },
     { 
       id: 'm10', 
       nombre: 'Wrap de Pollo', 
       descripcion: 'Tortilla de harina, pollo, lechuga y tomate.', 
-      precio: 80, img: 'https://plus.unsplash.com/premium_photo-1664478244517-513dc18af854?q=80&w=657&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+      precio: 80,
+      imagen: wrapPollo
+    }
   ];
 
+import agua from "../assets/bebidas/agua.jpg";
+import cafe from "../assets/bebidas/cafe.jpg";
+import capuchino from "../assets/bebidas/capuchino.jpg";
+import cola from "../assets/bebidas/cola.jpg";
+import jugoNaranja from "../assets/bebidas/jugo-naranja.jpg";
+import limonada from "../assets/bebidas/limonada.jpg";
+import malteadaChocolate from "../assets/bebidas/malteada-chocolate.jpg";
+import malteadaFresa from "../assets/bebidas/malteada-fresa.jpg";
+import malteadaVainilla from "../assets/bebidas/malteada-vainilla.jpg";
+import teFrio from "../assets/bebidas/te-frio.jpg";
 const bebidas = [
   {
     id: 'b1',
     nombre: 'Refresco Cola',
     descripcion: 'Vaso grande de 600ml.',
     precio: 30,
-    img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=300'
+    imagen: cola
   },
   {
     id: 'b2',
     nombre: 'Limonada',
     descripcion: 'Limonada fresca con chía.',
     precio: 35,
-    img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=300'
+    imagen: limonada
   },
   {
     id: 'b3',
-    nombre: 'Té Helado',
+    nombre: 'Té Frío',
     descripcion: 'Té negro con durazno.',
     precio: 30,
-    img: 'https://images.unsplash.com/photo-1597481499666-130f8eb2c9cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VCVDMyVBOSUyMG5lZ3JvJTIwY29uJTIwZHVyYXpub3xlbnwwfHwwfHx8MA%3D%3D'
+    imagen: teFrio
   },
   {
     id: 'b4',
-    nombre: 'Agua Natural',
+    nombre: 'Agua Pura',
     descripcion: 'Botella de agua purificada 500ml.',
     precio: 20,
-    img: 'https://images.unsplash.com/photo-1655079343782-f0fc4704753e?q=80&w=677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imagen: agua
   },
   {
     id: 'b5',
     nombre: 'Malteada Fresa',
     descripcion: 'Con crema batida y cereza.',
     precio: 55,
-    img: 'https://images.unsplash.com/photo-1611928237590-087afc90c6fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8J01hbHRlYWRhJTIwRnJlc2EnJTJDJTIwZGVzY3JpcGNpb24lM0ElMjAnQ29uJTIwY3JlbWElMjBiYXRpZGElMjB5JTIwY2VyZXphLiclMkN8ZW58MHx8MHx8fDA%3D'
+    imagen: malteadaFresa
   },
   {
     id: 'b6',
     nombre: 'Malteada Chocolate',
     descripcion: 'Chocolate espeso y chispas.',
     precio: 55,
-    img: 'https://media.istockphoto.com/id/664329770/photo/chocolate-chip-and-chocolate-smoothie.jpg?s=612x612&w=is&k=20&c=yEF0GzS7ca0ue9O9XtG91Er8h8dSW1-sqZYCPHv391U='
+    imagen: malteadaChocolate
   },
   {
     id: 'b7',
     nombre: 'Malteada Vainilla',
     descripcion: 'Sabor clásico con extra crema.',
     precio: 55,
-    img: 'https://images.unsplash.com/photo-1629386133133-5e639cf8d388?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imagen: malteadaVainilla
   },
   {
     id: 'b8',
     nombre: 'Café Americano',
     descripcion: 'Café de grano recién molido.',
     precio: 35,
-    img: 'https://images.unsplash.com/photo-1691014453405-7e3489d0c433?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imagen: cafe
   },
   {
     id: 'b9',
     nombre: 'Capuchino',
     descripcion: 'Espuma de leche y canela.',
     precio: 45,
-    img: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300'
+    imagen: capuchino
   },
   {
     id: 'b10',
     nombre: 'Jugo de Naranja',
     descripcion: 'Recién exprimido, 400ml.',
     precio: 40,
-    img: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=300'
+    imagen: jugoNaranja
   }
 ];
 

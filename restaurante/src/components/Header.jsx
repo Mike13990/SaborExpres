@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../assets/logo.png";
 
 function Header({ setVistaActual, toggleCarrito, numItems, setMenuMovilAbierto}) {
   
@@ -9,8 +10,8 @@ function Header({ setVistaActual, toggleCarrito, numItems, setMenuMovilAbierto})
           ☰
         </button>
         <div className="logo" onClick={() => setVistaActual('inicio')} style={{cursor: 'pointer'}}>
-          <img src="https://i.postimg.cc/g0VbJk4P/log.png" alt="Logo Sabor Express"/>
-          <h1>Sabor express</h1>
+          <img src={logo} alt="Logo Sabor Express"/>
+          <h1>Sabor Express</h1>
         </div>
 
         <ul className="nav-links-top">

@@ -1,17 +1,17 @@
 import React from 'react';
 import Productos from '../data/Productos';
 
-function Postres({postre, agregarCarrito}) {
+function Postres({agregarCarrito}) {
     const postres = Productos.postres;
     return (
-        <section className='seccion-postres'>
+        <section id='postres' className='categoria-seccion'>
             <h2>🍰 Postres</h2>
-            <div className='contenedor-cards'>
+            <div className='grid-productos'>
                 {postres.map((postre) => (
-                    <article className="card">
+                    <article key={postre.id} className="card-producto">
                         <img src={postre.imagen} alt={postre.nombre} />
                         <div className="contenido-card">
-                            <h2>{postre.nombre}</h2>
+                            <h3>{postre.nombre}</h3>
                             <p>{postre.descripcion}</p>
                             <p className="precio">Q.{postre.precio.toFixed(2)}</p>
                             <button onClick={() => agregarCarrito(postre)}>Agregar al carrito</button>

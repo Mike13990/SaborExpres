@@ -14,13 +14,14 @@ function App() {
   const [vistaActual, setVistaActual] = useState('inicio'); 
   const [menuMovilAbierto, setMenuMovilAbierto] = useState(false); 
   const [carritoAbierto, setCarritoAbierto] = useState(false);
+  const [mostrarPublicidad, setMostrarPublicidad] = useState(true);
 
   const [carrito, setCarrito] = useState([]);
 
   const agregarCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-    // Pequeño aviso visual para saber que funcionó
-    alert(`¡${producto.nombre} agregado al carrito!`); 
+    setCarrito(carritoAnterior => [...carritoAnterior, producto]);
+      // Pequeño aviso visual para saber que funcionó
+    alert(`¡${producto.nombre} agregado al carrito!`);
   };
 
   const eliminarCarrito = (indice) => {
@@ -65,11 +66,16 @@ function App() {
           )}
         </main>
 
-        <aside className="publicidad-flotante">
-          <h3>🚗 ¡Oferta Autos!</h3>
-          <p>Llévate tu auto seminuevo sin enganche.</p>
-        </aside>
-      </div>
+        {mostrarPublicidad && (
+          <aside className="publicidad-flotante">
+              <button
+                  className="btn-cerrar-publicidad"
+                  onClick={() => setMostrarPublicidad(false)}>✕</button>
+              <h3>🚗 ¡Oferta especial!</h3>
+              <p>Conoce los mejores vehículos al mejor precio.</p>
+              <button>Más información</button>
+          </aside>
+        )}
 
       {carritoAbierto && (
         <div className="contenedor-carrito-flotante">
@@ -83,7 +89,7 @@ function App() {
           </button>
         </div>
       )}
-      
+      </div>
       <Footer />
     </>
   );

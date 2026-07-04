@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import banner1 from "../assets/banner_1.jpg";
+import banner2 from "../assets/banner_2.jpg";
+import banner3 from "../assets/banner_3.jpg";
 
 function Carrusel() {
   const [indiceActual, setIndiceActual] = useState(0);
-  const imagenes = [
-    "https://i.postimg.cc/Dz6JGFw7/1.png",
-    "https://i.postimg.cc/ZqbxBJhB/2.png",
-    "https://i.postimg.cc/NG97rNZb/31.png"
-  ];
+  const imagenes = [banner1, banner2, banner3];
 
   useEffect(() => {
     const intervalo = setInterval(() => {
