@@ -1,4 +1,6 @@
 import React from 'react';
+import hamburguesa from "../assets/menus/hamburguesa-clasica.jpg";
+import promoVideo from "../assets/video/promo.mp4";
 
 function Inicio() {
   return (
@@ -11,7 +13,7 @@ function Inicio() {
           <p>Restaurantes y tiendas de alimentación que realizan entregas cerca de ti.</p>
         </div>
         <div className="hero-imagen">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Hamburguesa Gigante" />
+          <img src={hamburguesa} alt="Hamburguesa Gigante" />
         </div>
       </section>
 
@@ -49,12 +51,12 @@ function Inicio() {
           <div className="item-contacto">
             <span className="icono">📍</span>
             <h4>Dinos dónde estás</h4>
-            <p>Av.  Sur 123, Ciudad de guatemala. Te esperamos en nuestra sucursal principal.</p>
+            <p>Zona 10, Ciudad de Guatemala, Guatemala. Te esperamos en nuestra sucursal principal.</p>
           </div>
           <div className="item-contacto">
             <span className="icono">📞</span>
             <h4>Llámanos</h4>
-            <p>Teléfono: +502 5654 2252<br/>Atención de Lunes a Domingo de 9:00 am a 11:00 pm.</p>
+            <p>Teléfono: (+502) 2500-9999<br/>Atención de Lunes a Domingo de 9:00 am a 11:00 pm.</p>
           </div>
           <div className="item-contacto">
             <span className="icono">✉️</span>
@@ -65,9 +67,13 @@ function Inicio() {
 
         {/* Mapa de ubicación */}
          <div className="mapa-contenedor">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d173863.63517850495!2d-90.66457986858585!3d15.185289793942102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sau!4v1783026532754!5m2!1ses!2sau"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22160.99536734608!2d-90.5206280059961!3d14.594467978408769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3b921620f17%3A0xde5b4992ae81f907!2sZona%2010%2C%20Cdad.%20de%20Guatemala%2001010!5e1!3m2!1ses-419!2sgt!4v1783137086937!5m2!1ses-419!2sgt"
             width="100%" height="250" loading="lazy" title="Mapa de ubicación" style={{border: 0, borderRadius: '8px', marginTop: '20px'}}>
           </iframe>
+        </div>
+        <div className='video-promocional'>
+          <video src={promoVideo} controls autoPlay loop 
+            style={{ width: '100%', borderRadius: '10px', marginTop: '20px' }}/>
         </div>
       </section>
 

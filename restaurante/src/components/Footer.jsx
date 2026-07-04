@@ -5,7 +5,7 @@ function Footer() {
                 <h2>Restaurante Sabor Express</h2>
                 <p>Dirección: Zona 10, Ciudad de Guatemala, Guatemala</p>
                 <p>Teléfono: <a href="tel:+50225009999">(+502) 2500-9999</a></p>
-                <p>Correo: <a href="mailto:info@saborexpress.com.gt">info@saborexpress.com.gt</a></p>
+                <p>Correo: <a href="mailto:contacto@saborexpress.com.gt">contacto@saborexpress.com.gt</a></p>
             </section>
             <section className="redes-footer">
                 <h3>Redes sociales</h3>
